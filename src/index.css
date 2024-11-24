@@ -12,10 +12,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background: #563d7c;
+}
+nav a {
+  padding: 15px;
+}
+nav a.active {
+  color: white;
+}
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #cbbde2;
   text-decoration: inherit;
 }
 a:hover {
@@ -24,9 +38,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+
   min-width: 320px;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -65,4 +79,100 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.loginWrapper {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+.loginLeft {
+  flex: 1;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url("http://localhost:3000/images/loginpage.png");
+  min-width: 460px;
+  background-repeat: no-repeat;
+  background-position: right 2px;
+  @media (max-width: 877px) {
+    flex: 1;
+    display: none;
+  }
+}
+.frontImgWrapper {
+  display: flex;
+}
+.frontImg {
+  position: absolute;
+  top: 28px;
+  right: 59px;
+}
+.loginRight {
+  flex: 1;
+  display: flex;
+  height: max-content;
+  @media (max-width: 877px) {
+    justify-content: center;
+  }
+}
+.loginRightWrapper {
+  width: 360px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 3px;
+  padding-bottom: 10px;
+}
+
+.loginRightTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginRightTopTop {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 35px 0;
+}
+.loginRightTopLogo {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  font-weight: bold;
+}
+.loginRightTopForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.loginBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  padding-bottom: 20px;
+}
+.loginInput {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 0px 5px;
+}
+.loginButton {
+  margin-top: 10px;
+  width: 100%;
+  height: 25px;
+  background-color: #0095f6;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+.SignUptext {
+  color: #0095f6;
+  font-weight: 500;
+  cursor: pointer;
 }
